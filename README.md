@@ -1,61 +1,32 @@
 # FLL
 Code to use Pybricks for competitive robotics
 
+Hey everyone,
 
-Code is broken down into various files. To provide an example code from our 
-team's entry in the 2023 FLL Masterpiece Challenge is included. 
-
-
-Code is provided under the MIT license (just give us a shoutout if it is used/
-shower us with buttons/team swag if we cross paths at any competitions). We will be doing FTC soon.
-
-We would also love to hear from any teams that find this useful. Bonus points 
-if you are very far away from West Virginia. 
+I wanted to share a project I worked on for first lego league. 
+One of the things our team did this year was to use the Lego Bluetooth remotes to control our robot while we were developing new attachments for our robot as well as mission strategies. This allowed for a rapid development cycle as we didn't have to worry about coding. We also used the remote code to take measurements so we did not have to "guess and check" when programming the robot.
+Previously we did this in text Pybricks python. However Pybricks recently released a block interface. They also added Xbox controller support. This is better than using the Lego Bluetooth controllers as it allows for analog inputs vs the binary inputs on the Lego controllers. 
 
 
-Instructions to use (will create better tutorials later):
-oad all of the .py files into pybricks
-If you are using a spike prime hub go to the PrimeBotMain.py file. Compile and load this to the hub.
-If you are using a technic hub go to the TechnicBotMain.py file and complile and load to the hub (we cannot afford multiple spike hubs so we make experimental robots using cheap 4-port technic hubs, they are actually quite capable and, if allowed, could have completed this year's robot game)
+Included here is some example code to show how to use Pybricks for FLL. For one thing Pybricks does not have a user interface to select programs. An example one is given along with 3 example programs (drive in a circle, triangle, square). All 3 example programs first have the robot square off against the back wall, then turn on the gyro (for accurate movements), do the movements, then return home and turn off the gyro (so you could pick up the robot/switch attachments etc.). 
 
 
-Code assumes left drive motor is A, right drive motor is B
-Left attachment motor is C, Right attachment motor is D
-Light sensors are on E and F ports (if applicable, not present on technic bots)
-change the wheel size and axle spacing to whatever your bot uses (wheel size is printed on the wheels, have to measure wheel spacing or just count lego technic holes (holes are spaced 8 mm on center) 
+The remote mode is accessed by selecting program "0 0" (hit left to go backwards in the program list) and launched by hitting the center button. 
 
-You may also want to change the the speed settings. By default pyricks sets the maximal speed to about 40%
-of the true maximal speed based on motor speed and wheel size. We thus override this for a higher top speed 
-closer to 80% of the theoretical maximum. Also the acceleration paratmeters for pybricks are a bit aggressive.
-They likely work fine if you have a lightweight robot but in our case these were reduced to about 1/2 of the default values.
-Play with these values as needed. The code does print off to the console what pybricks would like these values to be before they are 
-overwritten upon the creating of a MCCDriveBase class. 
 
-Calibrate as follows:
-1st: Adjust distance. Do this by running the program labeled "S"
-1st buy a meter stick and place tape exactly 1 meter apart on the floor
-next run the program "S"
-If it drives too far you need to increase the wheel diameter
-If it drives too short you need to reduce the wheel diameter
-
-2nd: adjust wheel spacing
-Run the program labeled "T"
-This will cause the robot to turn 1080 degrees.
-If it turns too far it you need to adjust the wheel spacing parameter to be smaller
-If it turns not enough you need to make the wheel spacing parameter larger
-
-3rd: light sensor
-A pretty cool program is included that will tell you what values you need to use for black, white and threshold (line following for porportional control)
-Robot will drive 1/2 meter constantly compairing values and report the maximal and mininmal reflectance values as well as recommended settings. Make sure the robot drives over at least one set of white and black lines. Run in both full light and dim conditions so you can make sure the values you choose will work no matter what. 
+The left joystick makes the robot go fowards/backwards
+The right joystick turns
+The right trigger controls the right motor, pushing down the right bumper and the right trigger reverses the right motor. This is done via analog inputs so fine control is possible. 
+The left trigger controls the left attachment motor in the similar manner. 
+The "a" button is very cool. It prints off how far the robot drove/turned and how far the attachment motors moved. These values can be used to directly program the FLL robot and eliminated "guessing and checking" or having to use a ruler to figure out how far to make the robot drive/turn/move an attachment, etc. 
 
 
 
+Other settings that will need to be changed: 
+1. In the hub block you will have to set which direction your hub is facing. Front is the axis of the usb port, top is the screen. Unless you also have a vertically oriented hub design these values will be wrong. 
 
-In order to switch programs on a spike hub you have to press both the center button and the left or right button at the same time
-This was done as our team members would accidently bump the arrow buttons. Given that the code auto advances you shouldn't be using these buttons during a match anyways.
 
-Launching program/runs is done via pressing the bluetooth button (our robot had a unique design that blocked the center button when attachments were in place). You may wish to change this in the code
+2.  You also have to give the drivebase class the layout/dimensions of your robot. It needs both the wheel spacing (in mm) and wheel diameter (in mm). This is how the drivebase module is able to do accurate driving commands. 
 
-To pair with a remote select/launch the program labeled "R". Then push the center button on the lego bluetooth remote. The Red LEFT/RIGHT buttons act as macros and, when held down, will cause the left/right up/down buttons on the opposite side to control the attachment motors.A cool feature of the remote is that if you push both the left and right buttons it will print off how far the robot has driven, turned, and how many degrees the attachment motors have moved. This is very useful for programming the robot.
-
-Hope this helps everyone up their robot game! Would love to be beaten by someone who found this code useful! We are also wokring on starter code for using hte new Pybrick's block interface. 
+Two files are required. One is the "BlockStarterPackXBOX" the other is a text-python file called "extra_code" that contains 3 functions we couldn't figure out how to do easily in the block interface that are then imported into the Block interface/BlockStartPackXBOX file. 
+Enjoy! Please contact me with any questions!
