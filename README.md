@@ -15,9 +15,13 @@ The remote mode is accessed by selecting program "0 0" (hit left to go backwards
 
 
 The left joystick makes the robot go fowards/backwards
+
 The right joystick turns
+
 The right trigger controls the right motor, pushing down the right bumper and the right trigger reverses the right motor. This is done via analog inputs so fine control is possible. 
+
 The left trigger controls the left attachment motor in the similar manner. 
+
 The "a" button is very cool. It prints off how far the robot drove/turned and how far the attachment motors moved. These values can be used to directly program the FLL robot and eliminated "guessing and checking" or having to use a ruler to figure out how far to make the robot drive/turn/move an attachment, etc. 
 
 
