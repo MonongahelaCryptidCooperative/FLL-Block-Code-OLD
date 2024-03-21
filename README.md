@@ -8,8 +8,10 @@ One of the things our team did this year was to use the Lego Bluetooth remotes t
 Previously we did this in text Pybricks python. However Pybricks recently released a block interface. They also added Xbox controller support. This is better than using the Lego Bluetooth controllers as it allows for analog inputs vs the binary inputs on the Lego controllers. 
 
 
-Included here is some example code to show how to use Pybricks for FLL. For one thing Pybricks does not have a user interface to select programs. An example one is given along with 3 example programs (drive in a circle, triangle, square). All start with the gyro off, then turn it on, do the movements, then turn off the gyro and head back home. This lets you pick up/place the robot. All programs also autoadvance to the next one. This is very good in the tournament as it allows 
+Included here is some example code to show how to use Pybricks for FLL. For one thing Pybricks does not have a user interface to select programs. An example one is given along with 3 example programs (drive in a circle, triangle, square). All start with the gyro off, then turn it on, do the movements, then turn off the gyro and head back home. This lets you pick up/place the robot. All programs also autoadvance to the next one. This is very good in the tournament as it saves valuable seconds as you don't have to manually select th next program. There is also an example that shows how you can square off of the back wall to line up the robot, this can also be a good strategy.
 
+
+IF YOU DO NOT HAVE AN XBOX CONTROLLER YOU WILL HAVE TO REMOVE THE "XBOX" BLOCK OTHERWISE THE CODE WILL TIME OUT/STOP!! Alternatively you can use the non-XBOX copy of the code. 
 The remote mode is accessed by selecting program "0 0" (hit left to go backwards in the program list) and launched by hitting the center button. 
 
 
