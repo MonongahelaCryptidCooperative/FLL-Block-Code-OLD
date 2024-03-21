@@ -1,4 +1,4 @@
-# FLL
+# Pybricks FLL Block code created by Julian Huss
 Code to use Pybricks for competitive robotics
 
 Hey everyone,
@@ -8,8 +8,7 @@ One of the things our team did this year was to use the Lego Bluetooth remotes t
 Previously we did this in text Pybricks python. However Pybricks recently released a block interface. They also added Xbox controller support. This is better than using the Lego Bluetooth controllers as it allows for analog inputs vs the binary inputs on the Lego controllers. 
 
 
-Included here is some example code to show how to use Pybricks for FLL. For one thing Pybricks does not have a user interface to select programs. An example one is given along with 3 example programs (drive in a circle, triangle, square). All 3 example programs first have the robot square off against the back wall, then turn on the gyro (for accurate movements), do the movements, then return home and turn off the gyro (so you could pick up the robot/switch attachments etc.). 
-
+Included here is some example code to show how to use Pybricks for FLL. For one thing Pybricks does not have a user interface to select programs. An example one is given along with 3 example programs (drive in a circle, triangle, square). All start with the gyro off, then turn it on, do the movements, then turn off the gyro and head back home. This lets you pick up/place the robot. All programs also autoadvance to the next one. This is very good in the tournament as it allows 
 
 The remote mode is accessed by selecting program "0 0" (hit left to go backwards in the program list) and launched by hitting the center button. 
 
@@ -26,11 +25,11 @@ The "a" button is very cool. It prints off how far the robot drove/turned and ho
 
 
 
-Other settings that will need to be changed: 
-1. In the hub block you will have to set which direction your hub is facing. Front is the axis of the usb port, top is the screen. Unless you also have a vertically oriented hub design these values will be wrong. 
+SETTINGS THAT WILL NEED TO BE CHANGED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+1. In the hub block you will have to set which direction your hub is facing. Front is the axis of the usb port, top is the screen. Unless you also have a vertically oriented hub design these values will be wrong. YOU WILL LIKELY HAVE TO CHANGE THESE VALUES
 
 
-2.  You also have to give the drivebase class the layout/dimensions of your robot. It needs both the wheel spacing (in mm) and wheel diameter (in mm). This is how the drivebase module is able to do accurate driving commands. 
+2.  You also have to give the drivebase class the layout/dimensions of your robot. It needs both the wheel spacing (in mm) and wheel diameter (in mm). This is how the drivebase module is able to do accurate driving commands. SMALL SPIKE WHEELS ARE 56 mm LARGE SPIKE WHEELS ARE 88 mm. You can look up the dimensions of other wheels at http://www.wheels.sariel.pl/. Technic holes are spaced 8 mm apart so you can either count the holes or use a ruler to determine your wheel spacking. 
 
-Two files are required. One is the "BlockStarterPackXBOX" the other is a text-python file called "extra_code" that contains 3 functions we couldn't figure out how to do easily in the block interface that are then imported into the Block interface/BlockStartPackXBOX file. 
-Enjoy! Please contact me with any questions!
+
+Enjoy! Please contact me with any questions! Please credit our team (the Monongahela Cryptid Cooperative) and our coder (Julian Huss) if our code is used.
