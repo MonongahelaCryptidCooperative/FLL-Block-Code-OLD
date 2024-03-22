@@ -33,7 +33,7 @@ SETTINGS THAT WILL NEED TO BE CHANGED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 1. In the hub block you will have to set which direction your hub is facing. Front is the axis of the usb port, top is the screen. Unless you also have a vertically oriented hub design these values will be wrong. YOU WILL LIKELY HAVE TO CHANGE THESE VALUES
 
 
-2.  You also have to give the drivebase class the layout/dimensions of your robot. It needs both the wheel spacing (in mm) and wheel diameter (in mm). This is how the drivebase module is able to do accurate driving commands. SMALL SPIKE WHEELS ARE 56 mm LARGE SPIKE WHEELS ARE 88 mm. You can look up the dimensions of other wheels at http://www.wheels.sariel.pl/. Technic holes are spaced 8 mm apart so you can either count the holes or use a ruler to determine your wheel spacking. 
+2.  You also have to give the drivebase class the layout/dimensions of your robot. It needs both the wheel spacing of the contact area (in mm) and wheel diameter (in mm). This is how the drivebase module is able to do accurate driving commands. SMALL SPIKE WHEELS ARE 56 mm LARGE SPIKE WHEELS ARE 88 mm. You can look up the dimensions of other wheels at http://www.wheels.sariel.pl/. Technic holes are spaced 8 mm apart so you can either count the holes or use a ruler to determine your wheel spacing. Remember you are measuring where the wheels touch. So either measure that, or measure from the inside of one wheel to the outside of the other. 
 
 
 Enjoy! Please contact me with any questions! Please credit our team (the Monongahela Cryptid Cooperative) and our coder (Julian Huss) if our code is used.
