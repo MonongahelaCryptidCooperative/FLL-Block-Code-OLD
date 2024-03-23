@@ -11,6 +11,7 @@ Free to use but do credit us/give us a shout out!
 Two different versions:
 BlockStarterPack.py = Pybricks block interface starting pack without remote code
 BlockStarterPackXBOX.py = Pybricks block interface starting pack with xbox remote code. Very useful during the development process. Also fun. 
+Import whichever one you want (or both) into pybrick's web based or app based interface. 
 
 Hey everyone,
 
